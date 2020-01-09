@@ -3,7 +3,7 @@
 
 Name:           %{fontname}-fonts
 Version:        2.4.3
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Free Assamese font
 
 Group:          User Interface/X
@@ -16,6 +16,7 @@ BuildRequires: fontforge >= 20080429
 BuildRequires:  fontpackages-devel
 Requires:       fontpackages-filesystem
 Patch1: bug-549319-586852.patch
+Patch2: bug-691284.patch
 Obsoletes: lohit-fonts-common < %{version}-%{release}
 
 %description
@@ -25,6 +26,7 @@ This package provides a free Assamese truetype/opentype font.
 %prep
 %setup -q -n %{fontname}-%{version} 
 %patch1 -p1 -b .1-fix-font-conf
+%patch2 -p1 -b .2-added-rupee-sign
 
 
 %build
@@ -56,6 +58,9 @@ rm -fr %{buildroot}
 
 
 %changelog
+* Fri Jun 01 2011 Pravin Satpute <psatpute@redhat.com> - 2.4.3-5
+- Resolves: bug 691284
+
 * Tue May 04 2010 Pravin Satpute <psatpute@redhat.com> - 2.4.3-4
 - Resolves: bug 586897
 - Resolves: bug 586852
