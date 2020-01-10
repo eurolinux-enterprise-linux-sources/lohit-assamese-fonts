@@ -3,7 +3,7 @@
 
 Name:           %{fontname}-fonts
 Version:        2.5.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Free Assamese font
 
 Group:          User Interface/X
@@ -47,6 +47,9 @@ ln -s %{_fontconfig_templatedir}/%{fontconf} \
 
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 2.5.3-2
+- Mass rebuild 2013-12-27
+
 * Thu Jan 31 2013 Pravin Satpute <psatpute@redhat.com> - 2.5.3-1
 - Upstream release 2.5.3
 
